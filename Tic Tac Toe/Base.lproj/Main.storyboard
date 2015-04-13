@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOq-sF-jFa">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Tic Tac Toe" id="2Rz-BG-Iid"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qm-Ie-eo9">
+                                <rect key="frame" x="16" y="529" width="568" height="71"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="49"/>
+                                <state key="normal" title="RESET">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="sfM-As-fiL"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" tag="99" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="TicTackBoard_400x400" translatesAutoresizingMaskIntoConstraints="NO" id="zgf-m1-1Cw">
+                                <rect key="frame" x="75" y="75" width="450" height="450"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3r-Za-DSf">
+                                <rect key="frame" x="20" y="75" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="lUy-aP-HC5"/>
+                                    <constraint firstAttribute="height" constant="128" id="pzS-he-OLO"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="rvO-V8-CqY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMo-eu-ObZ">
+                                <rect key="frame" x="208" y="75" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="PaK-Zq-cN3"/>
+                                    <constraint firstAttribute="width" constant="128" id="zod-f5-e2y"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="1M3-th-5Gc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5D-Vz-wIN">
+                                <rect key="frame" x="20" y="236" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="1Ih-tm-Q7d"/>
+                                    <constraint firstAttribute="height" constant="128" id="6dA-a2-MVe"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oZx-3E-V5r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MY1-Xy-kHF">
+                                <rect key="frame" x="208" y="236" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7rG-ha-CX2"/>
+                                    <constraint firstAttribute="width" constant="128" id="x1T-tw-FU7"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oAt-b9-dgd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDF-7I-zDn">
+                                <rect key="frame" x="424" y="236" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="9B5-MH-90r"/>
+                                    <constraint firstAttribute="width" constant="128" id="TOj-eY-IZP"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="u5C-hl-Dus"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y6z-DS-d4U">
+                                <rect key="frame" x="20" y="397" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="FIo-F0-XLG"/>
+                                    <constraint firstAttribute="height" constant="128" id="fX9-rS-m8d"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bm9-qQ-4EW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROM-W1-zP8">
+                                <rect key="frame" x="208" y="397" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="XBT-hs-nO7"/>
+                                    <constraint firstAttribute="height" constant="128" id="kJz-XV-UZm"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="WEK-Lj-qbE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-8N-wBH">
+                                <rect key="frame" x="424" y="397" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="cP1-tn-gmk"/>
+                                    <constraint firstAttribute="height" constant="128" id="yfc-Q9-w46"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5BZ-a4-2MI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkM-ba-RCS">
+                                <rect key="frame" x="424" y="75" width="183" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="128" id="P3h-sN-UvE"/>
+                                    <constraint firstAttribute="height" constant="128" id="jTO-Us-YWC"/>
+                                </constraints>
+                                <state key="normal" image="blank" backgroundImage="blank">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cellTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="V5w-eT-4OB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ldU-8N-wBH" firstAttribute="leading" secondItem="ROM-W1-zP8" secondAttribute="trailing" constant="33" id="3hp-5e-xSv"/>
+                            <constraint firstItem="6qm-Ie-eo9" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="IrV-TO-s8f"/>
+                            <constraint firstItem="ROM-W1-zP8" firstAttribute="leading" secondItem="Y6z-DS-d4U" secondAttribute="trailing" constant="33" id="JKJ-cI-jK4"/>
+                            <constraint firstItem="Y6z-DS-d4U" firstAttribute="top" secondItem="n5D-Vz-wIN" secondAttribute="bottom" constant="33" id="L3d-9M-CjL"/>
+                            <constraint firstItem="yOq-sF-jFa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Mh1-RP-7aO"/>
+                            <constraint firstAttribute="trailing" secondItem="yOq-sF-jFa" secondAttribute="trailing" id="NSF-N5-3Nz"/>
+                            <constraint firstItem="MY1-Xy-kHF" firstAttribute="leading" secondItem="n5D-Vz-wIN" secondAttribute="trailing" constant="33" id="NYY-0Z-Ca1"/>
+                            <constraint firstAttribute="centerX" secondItem="MY1-Xy-kHF" secondAttribute="centerX" id="PJF-YI-Khi"/>
+                            <constraint firstAttribute="centerX" secondItem="6qm-Ie-eo9" secondAttribute="centerX" id="QNU-SP-s4l"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="6qm-Ie-eo9" secondAttribute="bottom" id="U2W-DW-oad"/>
+                            <constraint firstItem="zDF-7I-zDn" firstAttribute="leading" secondItem="MY1-Xy-kHF" secondAttribute="trailing" constant="33" id="WTg-I3-UOy"/>
+                            <constraint firstItem="ldU-8N-wBH" firstAttribute="top" secondItem="zDF-7I-zDn" secondAttribute="bottom" constant="33" id="Wkx-rC-SqO"/>
+                            <constraint firstItem="S3r-Za-DSf" firstAttribute="top" secondItem="yOq-sF-jFa" secondAttribute="bottom" constant="11" id="Xul-AC-Xhd"/>
+                            <constraint firstItem="mMo-eu-ObZ" firstAttribute="top" secondItem="yOq-sF-jFa" secondAttribute="bottom" constant="11" id="ZEQ-6u-KeS"/>
+                            <constraint firstItem="ROM-W1-zP8" firstAttribute="top" secondItem="MY1-Xy-kHF" secondAttribute="bottom" constant="33" id="bDc-FO-BUc"/>
+                            <constraint firstItem="MY1-Xy-kHF" firstAttribute="top" secondItem="mMo-eu-ObZ" secondAttribute="bottom" constant="33" id="bfT-Eg-g7D"/>
+                            <constraint firstAttribute="centerX" secondItem="mMo-eu-ObZ" secondAttribute="centerX" id="cAE-ng-8zg"/>
+                            <constraint firstItem="pkM-ba-RCS" firstAttribute="top" secondItem="yOq-sF-jFa" secondAttribute="bottom" constant="11" id="cmL-GL-AeO"/>
+                            <constraint firstAttribute="centerX" secondItem="zgf-m1-1Cw" secondAttribute="centerX" id="e3h-xW-vsY"/>
+                            <constraint firstItem="yOq-sF-jFa" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="eup-gq-XPE"/>
+                            <constraint firstItem="zDF-7I-zDn" firstAttribute="top" secondItem="pkM-ba-RCS" secondAttribute="bottom" constant="33" id="ezd-mp-tM4"/>
+                            <constraint firstAttribute="trailing" secondItem="6qm-Ie-eo9" secondAttribute="trailing" constant="16" id="feb-md-weV"/>
+                            <constraint firstItem="n5D-Vz-wIN" firstAttribute="top" secondItem="S3r-Za-DSf" secondAttribute="bottom" constant="33" id="pzk-Kb-YXx"/>
+                            <constraint firstItem="mMo-eu-ObZ" firstAttribute="leading" secondItem="S3r-Za-DSf" secondAttribute="trailing" constant="33" id="rxp-b7-Qx9"/>
+                            <constraint firstItem="zgf-m1-1Cw" firstAttribute="top" secondItem="yOq-sF-jFa" secondAttribute="bottom" constant="11" id="sMg-eW-xuB"/>
+                            <constraint firstItem="ldU-8N-wBH" firstAttribute="top" secondItem="zgf-m1-1Cw" secondAttribute="bottom" constant="-128" id="syx-xZ-QEa"/>
+                            <constraint firstAttribute="centerX" secondItem="yOq-sF-jFa" secondAttribute="centerX" id="sz2-XW-zOf"/>
+                            <constraint firstAttribute="centerX" secondItem="ROM-W1-zP8" secondAttribute="centerX" id="tql-AE-91c"/>
+                            <constraint firstItem="pkM-ba-RCS" firstAttribute="leading" secondItem="mMo-eu-ObZ" secondAttribute="trailing" constant="33" id="uyh-J9-os6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="6qm-Ie-eo9" id="bOm-Bt-PF7"/>
+                        <outletCollection property="allButtons" destination="S3r-Za-DSf" collectionClass="NSMutableArray" id="00S-Nk-ews"/>
+                        <outletCollection property="allButtons" destination="mMo-eu-ObZ" collectionClass="NSMutableArray" id="ZYm-AI-6Wf"/>
+                        <outletCollection property="allButtons" destination="pkM-ba-RCS" collectionClass="NSMutableArray" id="N7p-Eb-VEm"/>
+                        <outletCollection property="allButtons" destination="n5D-Vz-wIN" collectionClass="NSMutableArray" id="lb7-w3-OA0"/>
+                        <outletCollection property="allButtons" destination="MY1-Xy-kHF" collectionClass="NSMutableArray" id="86l-1B-TnW"/>
+                        <outletCollection property="allButtons" destination="zDF-7I-zDn" collectionClass="NSMutableArray" id="Uvi-7W-gJV"/>
+                        <outletCollection property="allButtons" destination="Y6z-DS-d4U" collectionClass="NSMutableArray" id="imD-I6-Nca"/>
+                        <outletCollection property="allButtons" destination="ROM-W1-zP8" collectionClass="NSMutableArray" id="w2l-Uy-Xkr"/>
+                        <outletCollection property="allButtons" destination="ldU-8N-wBH" collectionClass="NSMutableArray" id="HfE-9j-lno"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TicTackBoard_400x400" width="400" height="400"/>
+        <image name="blank" width="128" height="128"/>
+    </resources>
+</document>
